@@ -1,469 +1,191 @@
-/* =====================================================
-   CSS BARBEARIA PREMIUM - RESPONSIVO PROFISSIONAL
-   Autor: ArthurBarberHomeEstilo
-   Funciona em Mobile, Tablet e Desktop
-===================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* ================= GOOGLE FONT ================= */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* ================= VARIÁVEIS GLOBAIS ================= */
 :root {
-
-  /* Cores principais */
-  --primary: #d4af37;
-  --primary-dark: #b8962e;
-
-  /* Cores base */
-  --black: #0b0b0c;
-  --dark: #121214;
-  --gray: #1f1f23;
-  --light-gray: #a1a1aa;
-  --white: #ffffff;
-
-  /* Background */
-  --background: #0b0b0c;
-  --card: #141417;
-  --border: #27272a;
-
-  /* Sombra padrão */
-  --shadow: 0 10px 30px rgba(0,0,0,0.5);
-
+  --primary:#d4af37;
+  --dark:#0b0b0c;
+  --card:#141417;
+  --border:#27272a;
+  --gray:#a1a1aa;
 }
 
-/* ================= RESET GLOBAL ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* ================= BODY ================= */
-body {
-
-  font-family: 'Poppins', sans-serif;
-  background: var(--background);
-  color: var(--white);
-  line-height: 1.6;
-
-  overflow-x: hidden;
-
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--dark);
+  color:white;
 }
 
-/* ================= CONTAINER ================= */
-/* Centraliza todo conteúdo */
-.container {
-
-  max-width: 1200px;
-  margin: auto;
-
-  padding-left: 20px;
-  padding-right: 20px;
-
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
 }
 
-/* ================= HEADER ================= */
-.header {
-
-  position: sticky;
-  top: 0;
-  z-index: 999;
-
-  background: rgba(11,11,12,0.95);
-  backdrop-filter: blur(10px);
-
-  border-bottom: 1px solid var(--border);
-
+.header{
+  position:sticky;
+  top:0;
+  background:#000;
+  border-bottom:1px solid var(--border);
 }
 
-/* Conteúdo do header */
-.header-content {
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 15px 0;
-
+.header-content{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-/* ================= LOGO ================= */
-.logo-container {
-
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
-.logo-img {
-
-  width: 80px;
-  height: auto;
-
+.logo-img{
+  width:70px;
 }
 
-.logo {
-
-  font-size: 26px;
-  font-weight: 700;
-  color: var(--primary);
-
+.logo-text{
+  color:var(--primary);
+  font-weight:600;
 }
 
-/* ================= MENU ================= */
-.nav {
-
-  display: flex;
-  gap: 25px;
-
+.nav{
+  display:flex;
+  gap:25px;
 }
 
-.nav a {
-
-  text-decoration: none;
-  color: var(--white);
-  font-weight: 500;
-
-  position: relative;
-
+.nav a{
+  color:white;
+  text-decoration:none;
 }
 
-/* Linha animada */
-.nav a::after {
-
-  content: "";
-  position: absolute;
-
-  bottom: -5px;
-  left: 0;
-
-  width: 0;
-  height: 2px;
-
-  background: var(--primary);
-
-  transition: 0.3s;
-
+.nav a:hover{
+  color:var(--primary);
 }
 
-.nav a:hover::after {
-
-  width: 100%;
-
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
 }
 
-/* ================= BOTÃO MENU MOBILE ================= */
-.menu-toggle {
-
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-
-}
-
-/* ================= HERO SECTION ================= */
-.hero {
-
-  min-height: 100vh;
-
-  display: flex;
-  align-items: center;
+.hero{
+  min-height:85vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 
   background:
-  linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
   url('/img/Babearia.jpg');
 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
+  background-size:60%;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
-/* Conteúdo hero */
-.hero-content {
-
-  max-width: 700px;
-
+.hero h1{
+  font-size:48px;
 }
 
-/* Título hero */
-.hero h2 {
-
-  font-size: 48px;
-  margin-bottom: 20px;
-
+.hero p{
+  color:var(--gray);
+  margin:20px 0;
 }
 
-/* Texto hero */
-.hero p {
-
-  font-size: 18px;
-  color: var(--light-gray);
-
-  margin-bottom: 30px;
-
+.btn{
+  background:var(--primary);
+  padding:15px 30px;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
 }
 
-/* ================= BOTÕES ================= */
-.btn-primary {
-
-  background: var(--primary);
-  color: var(--black);
-
-  padding: 14px 30px;
-
-  border: none;
-  border-radius: 8px;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-
+.section{
+  padding:80px 0;
 }
 
-.btn-primary:hover {
-
-  background: var(--primary-dark);
-  transform: translateY(-2px);
-
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+  color:var(--primary);
 }
 
-/* Botão WhatsApp central */
-.btn-primary-WhatsApp {
-
-  display: block;
-  margin: 20px auto;
-
-  background: #25d366;
-  color: white;
-
-  padding: 14px 28px;
-
-  border-radius: 30px;
-  border: none;
-
-  cursor: pointer;
-
+.gallery,
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
-/* Botão WhatsApp flutuante */
-.whatsapp-float {
-
-  position: fixed;
-
-  bottom: 20px;
-  right: 20px;
-
-  background: #25d366;
-  color: white;
-
-  padding: 15px;
-
-  border-radius: 50px;
-
-  border: none;
-
-  cursor: pointer;
-
+.gallery img{
+  width:100%;
+  border-radius:10px;
 }
 
-/* ================= SECTIONS ================= */
-.section {
-
-  padding: 100px 0;
-
+.price-card{
+  background:var(--card);
+  padding:30px;
+  text-align:center;
+  border:1px solid var(--border);
+  border-radius:10px;
 }
 
-/* Títulos */
-.section-title {
-
-  text-align: center;
-  font-size: 36px;
-
-  margin-bottom: 50px;
-
-  color: var(--primary);
-
+.price{
+  color:var(--primary);
+  font-size:28px;
 }
 
-/* ================= CARDS ================= */
-.grid {
-
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-  gap: 25px;
-
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  padding:15px 20px;
+  border-radius:50px;
+  color:white;
+  text-decoration:none;
 }
 
-/* Card individual */
-.card {
-
-  background: var(--card);
-
-  padding: 30px;
-
-  border-radius: 10px;
-
-  border: 1px solid var(--border);
-
-  transition: 0.3s;
-
+.footer{
+  text-align:center;
+  padding:30px;
+  border-top:1px solid var(--border);
 }
 
-.card:hover {
-
-  transform: translateY(-8px);
-  border-color: var(--primary);
-
-}
-
-/* ================= GALERIA ================= */
-.gallery {
-
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-  gap: 20px;
-
-}
-
-.gallery img {
-
-  width: 100%;
-  border-radius: 10px;
-
-}
-
-/* ================= PREÇOS ================= */
-.pricing {
-
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-  gap: 20px;
-
-}
-
-.price-card {
-
-  background: var(--card);
-  padding: 25px;
-
-  border-radius: 10px;
-
-  text-align: center;
-
-}
-
-/* ================= FOOTER ================= */
-.footer {
-
-  text-align: center;
-
-  padding: 30px;
-
-  border-top: 1px solid var(--border);
-
-}
-
-/* =====================================================
-   RESPONSIVIDADE PROFISSIONAL
-===================================================== */
-
-/* TABLET */
-@media (max-width: 1024px) {
-
-.hero h2 {
-
-  font-size: 36px;
-
-}
-
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-/* mostra botão menu */
-.menu-toggle {
-
-  display: block;
-
-}
-
-/* esconde menu */
-.nav {
-
-  display: none;
-
-  position: absolute;
-  top: 70px;
-  right: 0;
-
-  background: var(--dark);
-
-  flex-direction: column;
-
-  width: 220px;
-
-  padding: 20px;
-
-}
-
-/* quando menu aberto */
-.nav-open {
-
-  display: flex;
-
-}
-
-/* ajusta hero */
-.hero {
-
-  text-align: center;
-
-}
-
-.hero h2 {
-
-  font-size: 28px;
-
-}
-
-.section {
-
-  padding: 60px 0;
-
-}
-
-.logo-img {
-
-  width: 60px;
-
-}
-
-}
-
-/* MOBILE PEQUENO */
-@media (max-width: 480px) {
-
-.hero h2 {
-
-  font-size: 24px;
-
-}
-
-.logo {
-
-  font-size: 20px;
-
-}
+@media(max-width:768px){
+
+  .nav{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    right:0;
+    top:70px;
+    background:#111;
+    padding:20px;
+  }
+
+  .nav.active{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .hero{
+    background-size:90%;
+  }
+
+  .hero h1{
+    font-size:28px;
+  }
 
 }
