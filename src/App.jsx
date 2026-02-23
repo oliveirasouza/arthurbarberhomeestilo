@@ -6,6 +6,9 @@ import Pricing from "./components/Pricing";
 import About from "./components/About";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact";
+
+
 import "./App.css";
 
 
@@ -22,6 +25,7 @@ export default function App() {
       <Gallery />
       <About />
       <Footer />
+      <Contact />
     </>
   );
 }

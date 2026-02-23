@@ -14,7 +14,7 @@ export default function Header() {
 
         <div className="logo-container">
           <img
-            src="/img/logo.png"
+            src="./img/logo.png"
             alt="Arthur BarberHome"
             className="logo-img"
           />
