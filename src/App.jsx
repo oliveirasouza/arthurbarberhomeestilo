@@ -12,9 +12,9 @@ function App() {
         <div className="container header-content">
 
           <div className="logo-container">
-            <img src="/img/logo.png" className="logo-img" />
+            <img src="./img/logo.png" className="logo-img" />
             <div className="logo-text">
-              Arthur Barber Home Estilo
+              Arthur<span>BarberHome Estilo</span>
             </div>
           </div>
 

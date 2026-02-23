@@ -37,7 +37,12 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  gap: 10px; /* espaço entre logo e menu */
 }
+
+
+
+
 
 .logo-container{
   display:flex;
@@ -52,6 +57,11 @@ body{
 .logo-text{
   color:var(--primary);
   font-weight:600;
+  font-size: 15px;
+}
+
+.logo-text span {
+  margin-left: 6px; /* separa visualmente */
 }
 
 .nav{
@@ -189,3 +199,7 @@ body{
   }
 
 }
+
+
+
+
