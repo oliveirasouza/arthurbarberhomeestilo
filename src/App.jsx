@@ -14,7 +14,7 @@ function App() {
           <div className="logo-container">
             <img src="/img/logo.png" className="logo-img" />
             <div className="logo-text">
-              Arthur Barber Home Estilo.
+              Arthur Barber Home Estilo..
             </div>
           </div>
 
