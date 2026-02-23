@@ -13,17 +13,17 @@ export default function Pricing() {
 
         <div className="price-card">
           Corte
-          <div className="price">R$ 30</div>
+          <div className="price">R$ 35,00</div>
         </div>
 
         <div className="price-card">
           Barba
-          <div className="price">R$ 20</div>
+          <div className="price">R$ 35,00</div>
         </div>
 
         <div className="price-card">
           Corte + Barba
-          <div className="price">R$ 45</div>
+          <div className="price">R$ 60,00</div>
         </div>
 
       </div>

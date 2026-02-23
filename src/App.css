@@ -323,6 +323,41 @@ body {
 
 }
 
+
+/* =================  PRICE CARD ================= */
+.grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 25px;
+
+}
+
+/* price-card individual */
+.price-card {
+
+  background: var(--price-card);
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+  border: 1px solid var(--border);
+
+  transition: 0.3s;
+
+}
+
+.price-card:hover {
+
+  transform: translateY(-8px);
+  border-color: var(--primary);
+
+}
+
+
 /* ================= GALERIA ================= */
 .gallery {
 
@@ -340,6 +375,69 @@ body {
   border-radius: 10px;
 
 }
+
+
+/* Item da galeria */
+.gallery-item {
+
+  background: #141417;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  border: 1px solid #27272a;
+
+  transition: 0.3s;
+
+}
+
+.gallery-item:hover {
+
+  transform: translateY(-5px);
+
+  border-color: #d4af37;
+
+}
+
+/* imagem */
+.gallery-item img {
+
+  width: 100%;
+
+  height: 250px;
+
+  object-fit: cover;
+
+  display: block;
+
+}
+
+/* nome abaixo da imagem */
+.gallery-item figcaption {
+
+  padding: 12px;
+
+  font-weight: 500;
+
+  color: #d4af37;
+
+  font-size: 16px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* ================= PREÇOS ================= */
 .pricing {
@@ -468,3 +566,4 @@ body {
 }
 
 }
+

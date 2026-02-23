@@ -2,7 +2,22 @@ import React from "react";
 
 export default function Gallery() {
 
+  const cortes = [
+
+    { img: "./img/Buzzcut.jpg", nome: "Buzz Cut" },
+    { img: "./img/Moicano.jpg", nome: "Moicano" },
+    { img: "./img/sufista.jpg", nome: "Surfista" },
+    { img: "./img/Top Knot.jpg", nome: "Top Knot" },
+    { img: "./img/Undercut.jpg", nome: "Undercut" },
+    { img: "./img/Pompadour.jpg", nome: "Pompadour" },
+    { img: "./img/degrade.jpg", nome: "Degradê" },
+    { img: "./img/afinado.jpg", nome: "Afro Afinado" },
+    { img: "./img/Bun Fade.jpg", nome: "Bun Fade" }
+
+  ];
+
   return (
+
     <section className="container section" id="galeria">
 
       <h2 className="section-title">
@@ -11,15 +26,27 @@ export default function Gallery() {
 
       <div className="gallery">
 
-        <img src="./img/Buzzcut.jpg" alt="Corte 1" />
-        <img src="./img/Moicano.jpg" alt="Corte 2" />
-        <img src="./img/sufista.jpg" alt="Corte 3" />
-        <img src="./img/Top Knot.jpg" alt="Corte 4" />
-        <img src="./img/Undercut.jpg" alt="Corte 5" />
-        <img src="./img/Pompadour.jpg" alt="Corte 6" />
-        <img src="./img/degrade.jpg" alt="Corte 7" />
+        {cortes.map((corte, index) => (
+
+          <figure className="gallery-item" key={index}>
+
+            <img
+              src={corte.img}
+              alt={corte.nome}
+            />
+
+            <figcaption>
+              {corte.nome}
+            </figcaption>
+
+          </figure>
+
+        ))}
 
       </div>
+
     </section>
+
   );
+
 }
