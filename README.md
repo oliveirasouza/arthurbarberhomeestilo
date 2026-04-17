@@ -1,4 +1,5 @@
 # React + Vite
+# ArthurBarberHome será refência em Barbearia em Fortaleza
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
